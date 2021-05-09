@@ -1,0 +1,17 @@
+show databases;
+use test;
+create table Employee (eid int, ename varchar(30), esalary decimal(10,2), hire_date date, designation varchar(20));
+desc employee;
+alter table employee  modify eid int(10);
+select* from employee;
+insert into employee values (100,'anil kumar','30000.25','2020-01-10','sde');
+insert into employee values (101,'harish','30000.75','2019-03-20','java_developer');
+insert into employee values (102,'neeraj','25000.50','2020-01-10','automation_tester');
+insert into employee values (103,'shiva','40000.75','2018-04-02','Ui_developer');
+insert into employee values (104,'sandeep','35000.75','2016-06-25','Ui_developer');
+select * from employee;
+update employee set designation='java_developer' where eid=104;
+select * from employee where eid=100;
+select * from employee where ename='harish';
+select * from employee where esalary >35000;
+select * from employee where designation='ui_developer';
